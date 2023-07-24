@@ -24,7 +24,7 @@ checkup "Install Xorg? [Y,n]" && [ "$ans" != "n" ] && { echo "installing" && sud
 
 pause
 
-checkup "Install Oh my ZSH? [Y,n]" && [ "$ans" != "n" ] && { echo "installing" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; } || echo "not installing Oh My Zsh"
+checkup "Install Oh my ZSH? [Y,n]" && [ "$ans" != "n" ] && { echo "installing" && sudo pacman -S zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"; } || echo "not installing Oh My Zsh"
 
 pause
 
